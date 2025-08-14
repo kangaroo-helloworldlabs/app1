@@ -8,10 +8,14 @@
 <body>
   상품목록페이지 입니다. (/product/list)
 
-  <script type="module">
-    import products from '../data/products.json';
+  <script>
 
-    console.log(products);
+    fetch('../data/products.json')
+      .then(response => response.json())
+      .then(data => {
+        console.log(data);
+      });
+
   </script>
 </body>
 </html>
